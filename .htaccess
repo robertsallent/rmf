@@ -1,0 +1,28 @@
+# Evita el listado de directorio
+# Options -Indexes
+
+# CORS
+# Header set Access-Control-Allow-Origin "*"
+# Header set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+
+# REGLAS DE REESCRITURA
+
+# Pone en marcha el mod rewrite
+RewriteEngine On
+
+# Base para todas las peticiones (DocumentRoot)
+RewriteBase "/"
+
+# Controlador
+# ejemplo: /book --> /index.php?controlador=book
+RewriteRule "^([a-z]+)/?$" "index.php?controlador=$1" [NC,L] 
+
+# Controlador y metodo
+# ejemplo: /book/list --> /index.php?controlador=book&operacion=list
+RewriteRule "^([a-z]+)/([a-z]+)/?$" "index.php?controlador=$1&operacion=$2" [NC,L] 
+
+# Controlador metodo y parametro
+# ejemplo: /book/show/2 --> /index.php?controlador=book&operacion=show&parametro=2
+RewriteRule "^([a-z]+)/([a-z]+)/([a-z0-9]+)/?$" "index.php?controlador=$1&operacion=$2&parametro=$3" [NC,L]
+
+

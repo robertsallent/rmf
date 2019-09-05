@@ -1,0 +1,18 @@
+NOTAS IMPORTANTES
+-----------------------------------------------------------------------------------------------------------------------
+
+- Estos tutoriales en PDF forman parte de la documentación del Certificado de Profesionalidad de nivel 3:
+IFCD0210 - Desarrollo de aplicaciones con tecnologías web que realizamos en el 
+CIFO del Vallès (Sabadell -Terrassa) y en CIFO la Violeta (Barcelona).
+
+- Se trata de un curso de formación ocupacional subvencionado (GRATUITO), que incluye:
+      - Programación en el lado del cliente (HTML, CSS, JS, JQuery)
+      - Programación en el lado del servidor (PHP, MySQL)
+      - Aplicaciones distribuidas (XML, JSON, REST...) 
+      - Desarrollo de aplicaciones mediante arquitectura MVC, incluyendo el uso de frameworks (CodeIgniter...). 
+
+Dispone también de prácticas de empresa y está puramente orientado a la inserción laboral.
+
+- Tanto el framework como la documentación han sido desarrollados expresamente por
+el formador del curso Robert Sallent (http://twitter.com/robertsallent) y son utilizados 
+como material de clase.

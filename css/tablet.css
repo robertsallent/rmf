@@ -1,0 +1,11 @@
+header h1{
+	font-size: 4vw;	
+}
+header h2{
+	font-size: 3vw;	
+}
+
+#social{
+	flex-direction: row;
+}
+

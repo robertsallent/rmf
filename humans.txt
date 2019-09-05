@@ -1,0 +1,17 @@
+/* TEAM */
+Main developer: Robert Sallent
+Site: https://robertsallent.com                       
+Twitter: @robertsallent
+Location: Sabadell, Barcelona, Catalonia
+							
+/* THANKS */
+Name: Homer, Marge, Maggie, Lisa and Bart
+						                            
+/* SITE */            
+Last update: 2018/01/01 
+Language: Spanish
+Doctype:HTML5                     
+Standards: HTML5, CSS3, JavaScript, PHP, MySQL       
+                                          
+Software: Sublime Text, Eclipse IDE, FileZilla, phpMyAdmin and MySQL Workbench.
+

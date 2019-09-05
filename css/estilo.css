@@ -1,0 +1,440 @@
+/*
+	Estilo básico del RMF
+
+	autor: Robert Sallent
+	última revisión: 13/11/2016
+*/
+
+
+
+/* RESET DE ESTILO Y REGLAS GENERALES */
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1, h2, h3{
+	margin: 10px 0px 10px 0px;
+}
+
+p{
+	margin-bottom: 15px;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+
+
+/* FLEX */
+
+.flex-container{
+	display:flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.flex1{flex:1;}
+.flex2{flex:2;}
+.flex3{flex:3;}
+.flex4{flex:4;}
+.flex5{flex:5;}
+.flex6{flex:6;}
+.flex7{flex:7;}
+.flex8{flex:8;}
+
+
+/* TAMAÑOS DE LETRA */
+.mini{font-size: 0.8em;}
+.maxi{font-size: 1.2em;}
+
+/* ALINEACION */
+.izquierda{text-align: left;}
+.derecha{text-align: right;}
+.centrado{text-align: center;}
+.justificado{text-align: justify;}
+
+/* FORMATO DE LETRA */
+.negrita{font-weight:bold;}
+.cursiva{font-style: italic;}
+.subrayado{text-decoration:underline;}
+
+/* EXITO Y ERROR */
+.exito{color: #3a3;}
+.error{color: #a33;}
+
+section.exito{
+	text-align: center;
+	padding: 20px;
+	background-color: #efe;
+	border: solid 2px #696;
+	border-radius: 5px;
+	margin: 20px 0px;
+}
+
+section.error{
+	text-align: center;
+	padding: 20px;
+	background-color: #fee;
+	border: solid 2px #966;
+	border-radius: 5px;
+	margin: 20px 0px;
+}
+
+section.error p, section.exito p{
+	text-align: center;
+}
+
+
+/* IMÁGENES */
+img.icono, img.boton{
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+}
+
+img.usuarioActual{
+	display: block;
+	width: 70%;
+	min-width: 100px;
+	outline: solid 1px lightblue;
+	background: linear-gradient(45deg, white, lightblue);
+	padding: 10px;
+	margin: 15px auto;
+}
+
+img.imagenactual{
+	width: 90%;
+	margin: auto;
+}
+
+/* BOTONES */
+.fakeButton, .button{
+	font: caption;
+	padding: 5px 8px;
+	margin-top: 5px;
+	border: outset 2px darkblue;
+	border-radius: 5px;
+	background-color: #eef;
+	transition: 0.15s;
+}
+
+.fakeButton:hover, .button:hover{
+	background-color: navy;
+	color: white;
+}
+
+/* ------------------------------------------------------------------------------------
+INICIO DE LOS ESTILOS PARA CADA UNO DE LOS ELEMENTOS 
+------------------------------------------------------------------------------------ */
+
+html{
+	background: linear-gradient(45deg,#eef,#fff,#eef);
+}
+
+body{
+	color: darkblue;
+	background-color: #fff;
+	font-family: arial, verdana;
+	width: 90%;
+  max-width: 1200px;
+	padding: 2%;
+	margin: 10px auto;
+	box-shadow: 0px 0px 4px rgba(60,60,60,0.6);	
+}
+
+
+/* HEADER */
+header{
+	padding: 5px;
+	background-color: #eef;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px 2px #669;
+}
+
+header h1{
+	font-size: 3em;	
+}
+header h2{
+	font-size: 2em;	
+}
+
+header figure img{
+	width: 95%;
+}
+
+
+/* ZONAS DE LOGIN Y LOGOUT */
+#login, #logout{
+	text-align: right;
+	padding: 5px 0px 5px 0px;
+}
+
+#login input:not([type="submit"]){
+	width: 80px;
+}
+
+#login input[type="text"],#login input[type="password"]{
+	padding: 5px;
+}
+
+#logout .email{
+	font-style: italic;
+}
+
+#logout img{
+	display: inline-block;	
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+}
+
+#logout form{
+	display: inline-block;
+}
+
+#login a, #logout a{
+	color: #aaf;	
+	font-weight: bold;
+}
+
+
+/* BARRA DE NAVEGACION */
+nav{
+	background-color: #aaf;
+	color: white;
+	display: flex;
+	border: solid 2px #aaf;
+}
+
+nav ul{
+	flex: 1;
+}
+
+nav ul:first-of-type{
+	text-align: left;
+}
+
+nav ul:nth-of-type(2){
+	text-align: right;
+}
+
+nav ul.menu>li{
+	display: inline-block;
+	list-style-type: none;
+	padding: 8px;	
+	transition: 0.5s;
+}
+nav ul.menu>li:hover{
+	color: #aaf;
+	background-color: white;	
+}
+
+
+/* ZONA LATERAL CON ENLACES */
+#social{
+	min-width: 80px;
+	text-align: center;
+	flex-direction: column;
+}
+
+#social figure{
+	width: 90%;
+	min-width: 80px;
+	padding: 5px;
+	transition: 0.2s;
+}
+
+#social figure:hover{
+	transform: scale(1.2) rotate(5deg);
+}
+
+#social img{
+	width: 90%;
+}
+
+#social h2{
+	font-size: 1.2em;
+}
+
+/* AREA PARA EL CONTENIDO */
+#content{
+	gap: 20px;
+}
+
+main{
+	padding: 10px 0px;
+	min-width: 340px;
+}
+
+main p{
+	text-align: justify;
+}
+
+main ul{
+	margin-bottom: 20px;
+}
+
+main ul li{
+	margin: 5px 35px;
+}
+
+main table{
+	margin: 10px auto;
+	width: 90%;
+}
+
+main table th{
+	color: white;
+	background-color: #669;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+}
+main table td{
+	padding: 2px;
+}
+
+main table tr:nth-of-type(even){
+	background-color: #eef;
+}
+
+main form.formulario{
+	background-color: #eef;
+	padding: 15px;
+}
+
+main form input{
+	margin-top: 5px;
+	padding: 5px;
+}
+main form label{
+	display: inline-block;
+	min-width: 140px;
+}
+
+
+/* ENLACES DE LA PARTE INFERIOR */
+div.links{
+	text-align: center;
+	margin: 20px;
+}
+
+div.links a{
+	margin: 10px;
+	color: #aaf;
+	font-weight:bold;
+}
+
+div.links a:hover{
+	text-decoration: underline;
+}
+
+
+/* FOOTER */
+footer{
+	padding: 30px;
+	background-color: #eef;
+	align-items: center;
+}
+
+footer summary{
+	min-width: 320px;	
+}
+footer figure{
+	text-align: right;
+	min-width: 240px;
+}
+footer img{
+	width: 100%;
+}
+
+footer a{
+	font-weight: bold;
+	color: #aaf;
+}
+footer a:hover{
+	text-decoration: underline;
+}
+
+/* REGLAS PARTICULARES PARA CADA UNA DE LAS VISTAS*/
+
+/* VISTA DE DETALLES */
+main table#detalles{
+	margin: 10px;
+}
+main table#detalles td:first-of-type{
+	font-weight: bold;
+	font-style: italic;
+	width: 30%;
+}
+main table#detalles td{
+	padding: 10px;
+}
+
+main table#detalles td:last-of-type{
+	width: 70%;
+}
+
+/* VISTA DE LISTADO */
+main table.listado{
+	width: 100%;
+	text-align: center;
+}
+main table.listado tr{
+	cursor: pointer;
+	transition: 0.5s;
+}
+main table.listado tr:hover{
+	background-color: #669;
+	color: white;
+}
+main table.listado img.fotousuario{
+	max-width: 50px;
+	margin: 2px;
+	padding: 0px;
+}
+main table.listado img.icono{
+	max-width: 30px;
+	margin: 5px;
+	padding: 5px;
+	vertical-align:middle;
+	border: solid 2px transparent;
+	border-radius: 2px;
+	transition: 0.5s;
+}
+main table.listado img.icono:hover{
+	border: solid 2px white;
+}
+
+/* PANEL DE CONTROL */
+main #panel{
+	background-color: #eef;
+	padding: 15px;
+}
+
+main #panel section.bloquepanel{
+	margin: 10px;
+	padding: 10px;
+	max-width: 50%;
+	min-width: 40%;
+	border: solid 1px #669;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px rgba(100,100,130,0.5);
+	background-color: white;
+}
+main #panel section.bloquepanel figure{
+	text-align: center;
+	font-weight: bold;
+}
+main #panel section.bloquepanel figure img{
+	width: 80%;
+}
+main #panel section.bloquepanel ul{
+	list-style-type: square;
+}

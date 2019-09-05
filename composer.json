@@ -1,0 +1,21 @@
+{
+	"name" : "robertsallent/rmf",
+	"type" : "framework",
+	"description" : "light framework for developing PHP applications",
+	"keywords" : [
+		"develop",
+		"framework"
+	],
+	"homepage" : "https://robertsallent.com/rmf",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Robert Sallent",
+			"email" : "robertsallent@gmail.com",
+			"homepage" : "http://robertsallent.com",
+			"role" : "Developer"
+		}
+	],
+	"require" : {
+		"php" : ">=7.2.0"
+	}
+}

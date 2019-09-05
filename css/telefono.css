@@ -1,0 +1,28 @@
+body{
+	margin: auto;
+	padding: 2%;
+	width: 96%;
+	border: none;
+}
+
+header>figure{
+	display: none;
+}
+
+header h1{
+	font-size: 5vw;	
+}
+header h2{
+	font-size: 4vw;	
+}
+
+
+#social{
+	flex-direction: row;
+}
+
+
+footer summary{
+	text-align: center;
+	margin: 20px 0px;
+}
