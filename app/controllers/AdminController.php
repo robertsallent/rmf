@@ -18,7 +18,7 @@
  Última revisión: 03/04/2019
  */
 
-class Admin extends Controller{
+class AdminController extends Controller{
 	
 	// Para mostrar el panel de control
 	public function index(){
@@ -27,7 +27,7 @@ class Admin extends Controller{
 	        throw new Exception('Debes ser administrador');
 	    
 	    //recuperar información para las estadísticas del panel de control
-	    $this->data['registrados']=UsuarioModel::total();
+	    $this->data['registrados']=Usuario::total();
 	    
 		//cargar la vista
 		load_view('admin/panel', $this->data);

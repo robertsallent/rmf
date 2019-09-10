@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "bd377fa7f59bb2b6e858768325a179ff",
+    "packages": [
+        {
+            "name": "robertsallent/clases",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robertsallent/clases.git",
+                "reference": "6419637222b610fd18317c8e14368b668c125a4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robertsallent/clases/zipball/6419637222b610fd18317c8e14368b668c125a4e",
+                "reference": "6419637222b610fd18317c8e14368b668c125a4e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Sallent",
+                    "email": "robertsallent@gmail.com",
+                    "homepage": "http://robertsallent.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP classes used for teaching and also in the RMF framework",
+            "homepage": "https://robertsallent.com",
+            "keywords": [
+                "develop"
+            ],
+            "time": "2019-09-09T12:22:10+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "robertsallent/clases": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.2.0"
+    },
+    "platform-dev": []
+}

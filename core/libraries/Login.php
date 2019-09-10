@@ -8,7 +8,7 @@
 
  Dependencias:
  - app/config/Config.php
- - app/model/UsuarioModel.php
+ - app/model/Usuario.php
  - core/helpers.php
  - core/libraries/DB.php
 
@@ -28,7 +28,7 @@ class Login{
 	
 	// Devuelve el usuario identificado en la aplicación.
 	// Devuelve NULL si no hay ningún usuario identificado.
-	public static function getUsuario():?UsuarioModel{
+	public static function getUsuario():?Usuario{
 		return self::$usuario;
 	}
 	
@@ -54,11 +54,11 @@ class Login{
 	// Realiza la operación de LOGIN
 	public static function log_in($u, $p){	
 		// comprueba que el usuario y password sean correctos
-		if(!UsuarioModel::validar($u, $p))
+		if(!Usuario::validar($u, $p))
 			throw new Exception('Error en la identificacion');
 	
 		// recupera el usuario y lo guarda en la variable de sesión
-		$_SESSION['user'] = serialize(UsuarioModel::getUsuario($u));					
+		$_SESSION['user'] = serialize(Usuario::getUsuario($u));					
 	}
 	
 	// Realiza la operación de LOGOUT

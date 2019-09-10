@@ -17,7 +17,7 @@
  Última revisión: 01/04/2019
  */
 
-class Welcome extends Controller{
+class WelcomeController extends Controller{
 	
 	//Método por defecto
 	//Carga la portada del sitio (vista welcome_message)

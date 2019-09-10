@@ -19,15 +19,20 @@
  */
 
 try{  
+    // Carga del autoload
+    require __DIR__ .'/vendor/autoload.php';
+    
     //Carga la configuración
-    require_once 'app/config/Config.php'; //recupera la configuración
+   // require_once __DIR__ .'/app/config/Config.php'; //recupera la configuración
     
     //Carga el núcleo del framework....
-    require_once 'core/helpers.php';    //carga las funciones helper
-    require_once 'core/autoload.php';   //carga el autoload
-    require_once 'core/App.php';        //carga la clase App
-    require_once 'core/Dispatcher.php'; //carga el repartidor de peticiones
-    require_once 'core/controllers/Controller.php';  //carga la clase base para los controladores
+    require_once __DIR__ .'/core/helpers.php';    //carga las funciones helper
+    //require_once __DIR__ .'/core/autoload.php';   //carga el autoload
+    //require_once __DIR__ .'/core/App.php';        //carga la clase App
+    //require_once __DIR__ .'/core/Dispatcher.php'; //carga el repartidor de peticiones
+    //require_once __DIR__ .'/core/controllers/Controller.php';  //carga la clase base para los controladores
+    
+    
     
     App::start(); //arranca la aplicación
 

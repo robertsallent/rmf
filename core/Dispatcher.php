@@ -26,18 +26,18 @@ class Dispatcher{
     
     public static function dispatch(){        
         //recupera el controlador a partir de la petición
-        $controlador = empty($_GET['controlador'])? Config::get('default_controller'):ucwords($_GET['controlador']);
-        
-        //si el controlador no existe, ERROR
-        if(!is_readable(Config::get('controller_directory').$controlador.'.php'))
-            throw new Exception('no existe el controlador '.$controlador);
-            
+        $controlador = empty($_GET['controlador'])? 
+            Config::get('default_controller'):
+            ucwords($_GET['controlador']).'Controller';
+                 
         //recupera la operación que se desea realizar
-        $operacion = empty($_GET['operacion'])? Config::get('default_method'):$_GET['operacion'];
+        $operacion = empty($_GET['operacion'])? 
+            Config::get('default_method'):
+            $_GET['operacion'];
         
         //si no se puede invocar la operación, ERROR
         if(!is_callable(array($controlador, $operacion)))
-            throw new Exception('no existe la operación '.$operacion);
+            throw new Exception("no existe la operación $controlador $operacion");
             
         //recuperar el parámetro que viene por GET
         $parametro = empty($_GET['parametro'])? '':$_GET['parametro'];

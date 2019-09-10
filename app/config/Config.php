@@ -36,23 +36,9 @@ class Config{
 	private $db_charset = 'utf8';	    //codificación de caracteres
 
 	// CONTROLADOR Y OPERACION POR DEFECTO
-	private $default_controller = 'Welcome'; // controlador por defecto
+	private $default_controller = 'WelcomeController'; // controlador por defecto
 	private $default_method = 'index';		// método por defecto
-	
-	// DIRECTORIOS POR DEFECTO PARA EL MVC
-	// son los directorios en los que el autoload buscará las clases
-	private $model_directory='app/model';
-	private $view_directory='app/views/';
-	private $controller_directory='app/controllers/';
-	private $template_directory='app/templates/';
-	
-	private $library_directory='core/libraries/';
-	private $errors_directory='core/exceptions/';
-	
-	// DIRECTORIOS AUTOLOAD
-	// rutas adicionales donde el autoload debe buscar las clases que necesite
-	private $autoload_directories=[];
-	
+		
 	// REDIRECCION DE LOGOUT
 	private $logout_redirect=true;
 	private $logout_redirect_url='/';

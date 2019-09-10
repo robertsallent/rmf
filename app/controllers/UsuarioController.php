@@ -12,14 +12,14 @@
  - app/config/Config.php
  - core/controllers/Controller.php 
  - core/helpers.php
- - app/model/UsuarioModel 
+ - app/model/Usuario 
  - Y de las vistas en: app/views/usuarios
     
  Autor: Robert Sallent
  Última revisión: 04/04/2019
  */
 
-class Usuario extends Controller{
+class UsuarioController extends Controller{
     
     // PROPIEDADES HEREDADAS DE CONTROLLER:
     // data: array de datos para pasar a la vista
@@ -32,14 +32,18 @@ class Usuario extends Controller{
     
     // METODOS
     
+    public function index(){
+        $this->crear();
+    }
+    
     // Método que se usa múltiples veces en esta clase para recuperar un usuario de la BDD
-    // Retorna un UsuarioModel. En caso de que algo falle lanza excepciones.
-    private function recuperar($id=0):UsuarioModel{
+    // Retorna un Usuario. En caso de que algo falle lanza excepciones.
+    private function recuperar($id=0):Usuario{
         // comprobar que llega el id del usuario que se quiere visualizar
         if(!$id) throw new Exception('No se ha indicado el id del usuario');
         
         // recuperar el usuario mediante el modelo
-        $u=UsuarioModel::getById($id);
+        $u=Usuario::getById($id);
         
         // comprobar que el usuario existe
         if(!$u) throw new Exception('El usuario indicado no existe');
@@ -76,7 +80,7 @@ class Usuario extends Controller{
         if(!$this->admin) throw new Exception('Debes ser administrador');
         
         // recupera todos los usuarios
-        $this->data['usuarios']=UsuarioModel::get();    
+        $this->data['usuarios']=Usuario::get();    
             
         // carga la vista con la lista de usuarios
         load_view('usuarios/lista', $this->data);
@@ -102,10 +106,10 @@ class Usuario extends Controller{
 	public function guardar(){
 	    // asegura que llegue el formulario
 	    if(!empty($_POST['guardar'])){
-			// crear una instancia de UsuarioModel
-			$nuevoUsuario = new UsuarioModel();
+			// crear una instancia de Usuario
+			$nuevoUsuario = new Usuario();
 			
-			// toma los datos que vienen por POST y los mapea al UsuarioModel
+			// toma los datos que vienen por POST y los mapea al Usuario
 			$nuevoUsuario->user = $this->post['user'];
 			$nuevoUsuario->password = MD5($this->post['password']);
 			$nuevoUsuario->nombre = $this->post['nombre'];
@@ -410,7 +414,7 @@ class Usuario extends Controller{
 	    $email=$this->post['email'];
 	    
 	    // retorna JSON
-	    echo UsuarioModel::emailOk($email)?'{"ok":true}':'{"ok":false}';
+	    echo Usuario::emailOk($email)?'{"ok":true}':'{"ok":false}';
     
 	}
 	
@@ -425,7 +429,7 @@ class Usuario extends Controller{
 	    $user=$this->post['user'];
 	    
 	    // retorna JSON
-	    echo UsuarioModel::userOk($user)?'{"ok":true}':'{"ok":false}';
+	    echo Usuario::userOk($user)?'{"ok":true}':'{"ok":false}';
 	    
 	}
 	

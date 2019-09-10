@@ -26,9 +26,10 @@ function load_file(string $ruta){
 //CARGA DE VISTAS
 function load_view(string $vista, array $datos=[]){
     
-    $ruta=Config::get('view_directory').$vista.'.php';
+    // prepara la ruta del fichero donde se debe encontrar la vista
+    $ruta="app/views/$vista.php";
     
-    //si no se encuentra el fichero con la vista...
+    //si no se encuentra el fichero...
     if(!is_readable($ruta))
         throw new Exception("No se encontró la vista $vista.");
         
