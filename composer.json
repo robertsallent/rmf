@@ -17,19 +17,18 @@
 		}
 	],
 	"require" : {
-		"php" : ">=7.2.0",
-		"robertsallent/clases" : "dev-master"
+		"php" : ">=7.2.0"
 	},
-   "autoload": {
-        "classmap": [
-        	"core/",
-        	"core/controllers/",
-        	"core/exceptions/",
-        	"core/libraries/",
-        	"app/config/",
-        	"app/controllers/",
-        	"app/model/",
-        	"app/templates/"
-        ]
-    }
+	"autoload" : {
+		"classmap" : [
+			"core/",
+			"core/controllers/",
+			"core/exceptions/",
+			"core/libraries/",
+			"app/config/",
+			"app/controllers/",
+			"app/model/",
+			"app/templates/"
+		]
+	}
 }
