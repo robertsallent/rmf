@@ -1,6 +1,7 @@
 NOTAS IMPORTANTES
 -----------------------------------------------------------------------------------------------------------------------
 
+
 - Estos tutoriales en PDF forman parte de la documentación del Certificado de Profesionalidad de nivel 3:
 IFCD0210 - Desarrollo de aplicaciones con tecnologías web que realizamos en el 
 CIFO del Vallès (Sabadell -Terrassa) y en CIFO la Violeta (Barcelona).

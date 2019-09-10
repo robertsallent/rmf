@@ -14,12 +14,8 @@
  /usuario/registro
  /telefono/ver/14
  
- 
- Dependencias:
- - app/config/Config.php
- 
- Autor: Robert Sallent
- Última revisión: 25/03/2019
+  Autor: Robert Sallent
+ Última revisión: 10/09/2019
  */
 
 class Dispatcher{

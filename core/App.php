@@ -9,12 +9,8 @@
   - invocar al dispatcher
   - gestionar los errores mediante excepciones, cargando la vista de error.
  
- Dependencias: 
- - core/libraries/Login.php
- - core/Dispatcher.php
-
  Autor: Robert Sallent
- Última revisión: 25/03/2019
+ Última revisión: 10/09/2019
  */
 
 class App{

@@ -9,14 +9,14 @@
  
  Dependencias: app/config/Config.php, core/autoload.php
  Autor: Robert Sallent
- Última revisión: 11/07/2019
+ Última revisión: 10/09/2019
  */
 
 try{
-    require_once 'app/config/Config.php'; //recupera la configuración
-    require_once 'core/autoload.php'; //carga el autoload
-       
-    //Crea la tabla para los usuarios (el nombre de la tabla está en Config.php)
+    // Carga del autoload
+    require __DIR__ .'/vendor/autoload.php';
+    
+    //Crea la tabla para los usuarios
     $consulta="CREATE TABLE IF NOT EXISTS usuarios (
           id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,   
           user VARCHAR(32) NOT NULL UNIQUE KEY,
@@ -43,12 +43,16 @@ try{
     if(!DBPS::insert($consulta))
         throw new PDOException("No se pudo crear el usuario admin");
 
-    //Redirección a la portada y eliminación de este script    
+    //Redirección a la portada   
     header("Refresh:5; url=index.php"); //redirige a la portada
+    
+    //Mensaje de confirmación
     echo "<p>La creación de la tabla de usuarios se realizó correctamente.</p>";
     echo "<p>Redirigiendo a la portada en 5 segundos...</p>";
+    
+    //Eliminación de este script
     @unlink('setup.php'); //Borrado de este fichero
     
 }catch(Throwable $t){
-    die("Se produjo el siguiente error al cargar el framework: ".$t->getMessage());
+    die("Se produjo el siguiente error: ".$t->getMessage());
 }
