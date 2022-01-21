@@ -218,7 +218,7 @@ class UsuarioController extends Controller{
             $this->data['usuario'] = Login::getUsuario();
             
             // preparar los datos para la vista
-                $this->data['success'] = "Modificación realizada correctamente.";
+            $this->data['success'] = "Modificación realizada correctamente.";
         }
         $this->data['max_image_size'] = Config::get('user_image_max_size');
         
